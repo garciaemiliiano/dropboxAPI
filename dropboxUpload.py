@@ -11,7 +11,7 @@ class DropboxUploader:
         nombreDelArchivo = nArchiv + ex[extensionElegida-1] #Nombre final.
         archivoNube = "/DropboxPython/"+nombreDelArchivo #Direccion en la carpeta de dropbox a donde se va a guardar.
         abrirArchivo = open(nombreDelArchivo,'rb').read() #Lee el archivo.
-        clienteDropbox = dropbox.Dropbox('HVkvfTN9C-AAAAAAAAAAHSgAbw_WH1e5vEYBHUc16wd5LTNS0LSLxLiABbTxmxGs') #Token de seguridad que confirma que soy yo.
+        clienteDropbox = dropbox.Dropbox('AcessToken') #Token de seguridad que confirma al usuario.
         clienteDropbox.files_upload(abrirArchivo,archivoNube) #Metodo que sube los archivos, toma la lectura de un archivo y la direccion a donde se guardara en la nube.
 
 
