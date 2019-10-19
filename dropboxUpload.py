@@ -1,4 +1,4 @@
-import dropbox #Importamos api Dropbox
+import dropbox #Importamos API Dropbox
 
 class DropboxUploader:
 
