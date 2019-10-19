@@ -7,29 +7,28 @@ from os.path import abspath
 def estaEnCarpeta(extensionParam,listaCarpeta):
     for extension in listaCarpeta:
         if extension == extensionParam:
-            return true;
-    return false;
+            return True;
+    return False;
 
 def solamenteExtension(nombreArchivo):
-    nueva = ""
+    cont = 0
     for letra in nombreArchivo:
-        nueva = letra + nueva
-    n=""
-    for letra in nueva:
-        while letra != ".":
-            n=n+letra
-    return n
+        if letra == ".":
+            return cont
+        cont +=1
 
-
-def ls(ruta = getcwd()):
+def archivosEnCarpeta(ruta = getcwd()):
     return [arch.name for arch in scandir(ruta) if arch.is_file()]
 
-lista_arq = ls() 
+lista_arq = archivosEnCarpeta() 
 ext=[]
 listaExtensiones = [".jpg",".gif",".bmp",".jpeg",".png"]
 
-for extensiones in listaExtensiones:
-    if (extensiones,lista_arq):
-        ext.append(extensiones)
+name = "jp.jpeg"
+a=""
+for i in range (solamenteExtension(name),len(name)):
+    a= a+name[i]
 
-print(solamenteExtension('jp.jpeg'))
+for extension in listaExtensiones:
+    if (a == extension):
+        print(a)
